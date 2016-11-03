@@ -1,0 +1,140 @@
+{
+  "name": "lvyue-touch",
+  "version": "1.1.0",
+  "description": "lvyue-touch",
+  "repository": "http://gitlab.corp.qunar.com/fe/lvyue-touch",
+  "keywords": [
+    "webpack"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run serve",
+    "build:prod": "better-npm-run build:prod",
+    "build:beta": "better-npm-run build:beta",
+    "build:dev": "better-npm-run build:dev",
+    "build": "better-npm-run build",
+    "serve": "better-npm-run serve",
+    "serve:dist": "better-npm-run build && better-npm-run serve:dist",
+    "eslint": "better-npm-run eslint"
+  },
+  "betterScripts": {
+    "serve": {
+      "command": "babel-node tools/serve.js",
+      "env": {
+        "NODE_ENV": "development",
+        "BUILD_TARGET": "local"
+      }
+    },
+    "serve:dist": {
+      "command": "babel-node tools/serve:dist.js",
+      "env": {
+        "NODE_ENV": "development",
+        "BUILD_TARGET": "local"
+      }
+    },
+    "build:prod": {
+      "command": "webpack --verbose --colors --display-error-details --config config/webpack.build.babel.js",
+      "env": {
+        "NODE_ENV": "production",
+        "BUILD_TARGET": "prod",
+        "CDN_ROOT": "http://q.qunarzz.com/lvyue-touch/prd/assets"
+      }
+    },
+    "build:beta": {
+      "command": "webpack --verbose --colors --display-error-details --config config/webpack.build.babel.js",
+      "env": {
+        "NODE_ENV": "beta",
+        "BUILD_TARGET": "betaa",
+        "CDN_ROOT": "http://mobileqzz.beta.qunar.com/lvyue-touch/prd/assets"
+      }
+    },
+    "build:betab": {
+      "command": "webpack --verbose --colors --display-error-details --config config/webpack.build.babel.js",
+      "env": {
+        "NODE_ENV": "beta",
+        "BUILD_TARGET": "betab",
+        "CDN_ROOT": "http://mobileqzz.beta.qunar.com/lvyue-touch/prd/assets"
+      }
+    },
+    "build:dev": {
+      "command": "webpack --verbose --colors --display-error-details --config config/webpack.build.babel.js",
+      "env": {
+        "NODE_ENV": "development",
+        "BUILD_TARGET": "development",
+        "CDN_ROOT": "http://l-wap1.wap.dev.cn6.qunar.com/lvyue-touch/prd/assets"
+      }
+    },
+    "build": {
+      "command": "webpack --config config/webpack.build.babel.js",
+      "env": {
+        "NODE_ENV": "",
+        "CDN_ROOT": ""
+      }
+    },
+    "eslint": {
+      "command": "./node_modules/.bin/eslint src"
+    }
+  },
+  "devDependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
+    "packing-html-webpack-plugin": "^1.0.0",
+    "packing-urlrewrite": "^0.1.5",
+    "tmodjs-loader": "^1.0.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-plugin-typecheck": "^3.9.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-runtime": "^6.9.2",
+    "better-npm-run": "^0.0.9",
+    "classnames": "^2.2.5",
+    "clean-webpack-plugin": "^0.1.9",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-loader": "^1.4.1",
+    "eslint-plugin-import": "^1.10.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "glob": "^7.0.5",
+    "highlight.js": "^8.9.1",
+    "html-loader": "^0.4.3",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "loader-utils": "^0.2.15",
+    "packing-ajax": "^0.0.1",
+    "packing-rev-webpack-plugin": "^1.0.6",
+    "postcss-loader": "^0.9.1",
+    "raw-loader": "^0.5.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^3.0.0",
+    "redux": "^3.6.0",
+    "replace-hash-webpack-plugin": "^1.4.11",
+    "sockjs-client": "1.0.0",
+    "strip-loader": "^0.1.2",
+    "style-loader": "^0.13.1",
+    "superagent": "^2.2.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  },
+  "engines": {
+    "node": ">=0.12.7"
+  }
+}

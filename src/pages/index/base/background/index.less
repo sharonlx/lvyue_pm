@@ -1,0 +1,24 @@
+img.background {
+    position: fixed;
+    width: 10.56rem;
+    top: -1rem;
+    left: -1rem;
+    z-index: -2;
+
+    &.blur {
+        filter: blur(20px);
+    }
+}
+
+.background-mask {
+    position: fixed;
+    background-color: #222; 
+    background-size: 10.56rem;
+    background-position: -1rem -1rem;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.5;
+}

@@ -1,0 +1,37 @@
+---
+parser: babel-eslint
+
+#extends:
+#  - ./node_modules/fbjs-scripts/eslint/.eslintrc
+
+# We're stricter than the default config, mostly. We'll override a few rules and
+# then enable some React specific ones.
+rules:
+  accessor-pairs: 0
+  #brace-style: [2, 1tbs]
+  comma-dangle: [2, never]
+  #consistent-return: 2
+  dot-location: [2, property]
+  dot-notation: 2
+  #eol-last: 2
+  #indent: [2, 2]
+  no-bitwise: 0
+  no-dupe-class-members: 2
+  no-multi-spaces: 2
+  no-restricted-syntax: [2, WithStatement]
+  no-shadow: 2
+  no-unused-expressions: 2
+  no-unused-vars: [2, {args: none}]
+  quotes: [2, single, avoid-escape]
+  keyword-spacing: 2
+  space-before-blocks: 2
+  # TODO: enable this rule after https://github.com/eslint/eslint/pull/3768 lands
+  space-before-keywords: 0
+  strict: [2, global]
+
+
+globals:
+  __DEVTOOLS__: true
+  # CUSTOM RULES
+  # the second argument of warning/invariant should be a literal string
+  #react-internal/warning-and-invariant-args: 2

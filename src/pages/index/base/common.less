@@ -1,0 +1,142 @@
+@import "./consts.less";
+
+@font-face {
+    font-family: "lvyue_smarthome";
+    src: url('../../../assets/fonts/lvyue_smarthome.eot'); 
+    src: url('../../../assets/fonts/lvyue_smarthome.eot?#iefix') format('embedded-opentype'),
+    url('../../../assets/fonts/lvyue_smarthome.woff') format('woff'), 
+    url('../../../assets/fonts/lvyue_smarthome.ttf') format('truetype'), 
+    url('../../../assets/fonts/lvyue_smarthome.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family:"lvyue_smarthome" !important;
+    font-size: 0.6rem;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+      
+.gray {
+    color: @gray;
+}
+.font-small {
+    font-size: 0.24rem;
+}
+.font-tiny {
+    font-size: 0.22rem;
+}
+.mt20 {
+    margin-top: 0.2rem;
+}
+.mt60 {
+    margin-top: 0.6rem;
+}
+.mt80 {
+    margin-top: 0.8rem;
+}
+.mid-block{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.w500 {
+    width: 5rem;
+}
+
+
+.block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 7.10rem;
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 0.05rem;
+
+    p {
+        margin: 0;
+    }
+}
+
+.row {
+    font-size: 0.28rem;
+    border-bottom: 1px solid #e1e2e6;
+    line-height: 0.5rem;
+    position: relative;
+    
+    input {
+        border: none;
+        line-height: 0.5rem;
+        padding: 0.25rem 0;
+        background-color: transparent;
+    }
+
+    .iconfont {
+        position: absolute;
+        font-size: 0.4rem;
+        top: 0.25rem;
+        left: 0.05rem;
+        color: #333;
+    }
+
+    &.padding {
+        padding: 0.25rem 0;
+    }
+
+    &.on {
+        color: @orange;
+    }
+
+
+}
+
+button {
+    border-radius: ~"0.50rem / 50%";
+    background-color: #ff8161;
+    border: none;
+    color: #fff;
+    line-height: 0.50rem;
+    padding: 0.25rem;
+    box-sizing: border-box;
+    font-size: 0.28rem;
+
+
+    &.light {
+        border: 1px solid #ff8161;
+        color: #ff8161;
+        background-color: transparent;
+    }
+
+    &.slim {
+        border-radius: ~"0.25rem / 50%";
+        padding: 0.10rem;
+    }
+}
+
+.view {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    overflow: auto;
+
+    &.animated {
+        animation-duration: 0.6s;
+    }
+}
+
+
+.fade-transition {
+  transition: all 0.6s ease;
+  opacity: 1;
+
+  &.fast {
+      transition-duration: 0.4s;
+  }
+}
+.fade-enter, .fade-leave {
+  opacity: 0;
+}

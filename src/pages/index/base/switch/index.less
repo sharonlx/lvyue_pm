@@ -1,0 +1,49 @@
+@animationTime: 0.5s;
+
+.switch-wrapper{
+    height: 0.65rem;
+    width: 1.05rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    position: relative;
+    background-color: #4dd965;
+    transition-duration: @animationTime;
+
+    &.closed {
+        background-color: #e5e5e5;
+
+        .slider {
+            left: 0.025rem;
+            box-shadow: 0.025rem 0.025rem #e5e5e5;
+        }
+
+        .closed-bg {
+            background-color: #fff;
+        }
+    }
+
+    .closed-bg{
+        background-color: #4dd965;
+        border-radius: 0.5rem;
+        height: 0.6rem;
+        width: 1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition-duration: @animationTime;
+    }
+
+    .slider{
+        height: 0.6rem;
+        width: 0.6rem;
+        border-radius: 0.6rem;
+        background-color: #fff;
+        position: absolute;
+        top: 0.025rem;
+        left: 0.425rem;
+        box-shadow: none;
+        transition-duration: @animationTime;
+    }
+
+}
